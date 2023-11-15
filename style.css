@@ -238,6 +238,7 @@ button:hover {
 #stats,
 .count-particles {
     -webkit-user-select: none;
+    user-select: none;
     margin-top: 5px;
     margin-left: 5px;
 }
@@ -249,4 +250,75 @@ button:hover {
 
 .count-particles {
     border-radius: 0 0 3px 3px;
+}
+
+
+/*TIMELINE*/
+.timeline-block {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.timeline {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline li span {
+    font-weight: bold;
+}
+
+.timeline li img {
+    margin-top: 10px;
+    max-width: 25%; /* Ensures the image is responsive and fits the container */
+    height: auto;
+    border-radius: 8px;
+}
+
+.timeline li:before {
+    content: '';
+    background-color: #4CAF50;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+
+/*PICTURES CSS*/
+
+.random-pictures-block {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 8px;
+}
+
+.random-pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.random-pictures img {
+    margin: 10px;
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.random-pictures img:hover {
+    transform: scale(1.1);
 }
