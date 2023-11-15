@@ -1,0 +1,252 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background: rgb(40, 40, 40);
+    background: linear-gradient(153deg, rgba(40, 40, 40, 1) 0%, rgba(0, 4, 59, 1) 54%, rgba(50, 50, 50, 1) 100%);
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Video Background Styles */
+#video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    opacity: 0.2;
+    object-fit: cover;
+}
+
+/* Ensure content on top is visible */
+body,
+.text-block,
+.header,
+.gallery,
+.quiz-block {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}
+
+.text-block {
+    margin: 5em 0 2em;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+}
+
+.text-block p {
+    font-size: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img {
+    margin: 10px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Updated Zoom-in effect */
+.zoom-in {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.zoom-in img {
+    margin: 10px auto;
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.zoom-in img:hover {
+    transform: scale(1.1);
+    /* Zoom in on hover */
+}
+
+/* Zoom-out effect */
+.zoom-out {
+    text-align: center;
+    transition: transform 0.6s ease;
+}
+
+.zoom-out:hover {
+    transform: scale(0.9);
+    /* Zoom out on hover */
+}
+
+/* Common styling for images in zoom blocks */
+.zoom-in img,
+.zoom-out img {
+    max-width: 25%;
+    height: auto;
+    margin: 10px;
+}
+
+/* Styling for text inside zoom blocks */
+.zoom-in p,
+.zoom-out p {
+    font-size: 20px;
+    color: white;
+}
+
+
+/* Quiz Block Styling */
+.quiz-block {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #e7e7e7;
+    border-radius: 8px;
+    color: black;
+}
+
+.quiz-block h2 {
+    color: #333;
+}
+
+.quiz-option {
+    display: inline-block;
+    margin: 10px;
+}
+
+.quiz-option input[type="radio"] {
+    display: none;
+}
+
+.quiz-option input[type="radio"]+img {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    width: 150px;
+    height: auto;
+    transition: border 0.3s ease;
+}
+
+.quiz-option input[type="radio"]:checked+img {
+    border: 2px solid #4CAF50;
+}
+
+.quiz-option img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.quiz-option img:hover {
+    transform: scale(1.05);
+}
+
+/* Style the submit button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #367c39;
+}
+
+
+/*HEART*/
+.heart {
+    font-size: 150px;
+    color: #e00;
+    animation: beat .5s infinite alternate;
+    transform-origin: center;
+}
+
+/* Heart beat animation */
+@keyframes beat {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/*PARTICLES SNOW*/
+
+
+/* ---- particles.js container ---- */
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13e8e9;
+    font-size: 0.8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
